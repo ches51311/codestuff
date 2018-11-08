@@ -10,6 +10,16 @@ def perm(n, m):
 def comb(n, m):
     return(perm(n, m) / factorial(m))
 
+def binary(m):
+    A = np.zeros((pow(2,m),m))
+    for i in range(pow(2,m)):
+        n=i
+        for j in range(m-1,-1,-1):
+            A[i][m-1-j] = n/pow(2,j)
+            n = n%pow(2,j)
+    return A
+
+
 
 def RM(r,m):
     row = 0
@@ -59,5 +69,6 @@ def parity_check(r,m,N):
 
 
 M = RM(2,4)
-print M
-parity_check(2,4,10)
+#print M
+#parity_check(2,4,10)
+print binary(6)
