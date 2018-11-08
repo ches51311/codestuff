@@ -19,6 +19,18 @@ def binary(m):
             n = n%pow(2,j)
     return A
 
+def int2bin(in):
+    print "hi"
+
+def bin2int(b):
+    a=0
+    i=1
+    for j in b:
+        a=a+j*pow(2,len(b)-i)
+        i=i+1
+    print a
+
+
 
 
 def RM(r,m):
